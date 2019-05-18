@@ -2,10 +2,10 @@
 -- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Servidor: localhost:3308
--- Tiempo de generación: 17-05-2019 a las 10:45:42
--- Versión del servidor: 5.7.23
--- Versión de PHP: 7.1.28
+-- Servidor: localhost:3306
+-- Tiempo de generación: 18-05-2019 a las 12:11:50
+-- Versión del servidor: 8.0.16
+-- Versión de PHP: 7.3.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -52,16 +52,15 @@ CREATE TABLE `productos` (
 
 INSERT INTO `productos` (`id_Producto`, `nombre`, `precio`, `tipo_Producto`) VALUES
 (1, 'montadito de jamon', 2.0, 'Comida'),
-(2, 'montadito de lomo', 2.0, 'Comida'),
-(3, 'batido de fresa', 1.0, 'Bebida'),
+(2, 'montadito de lomo', 1.0, 'Comida'),
+(3, 'batido de fresa', 8.0, 'Bebida'),
 (4, 'kas de naranja', 1.0, 'Bebida'),
 (5, 'kas de limon', 1.0, 'Bebida'),
 (6, 'coca cola zero', 1.0, 'Bebida'),
 (7, 'coca cola light', 1.0, 'Bebida'),
 (8, 'helado de chocolate', 1.0, 'Helado'),
 (9, 'helado de fresa', 1.0, 'Helado'),
-(10, 'montadito de mechá', 2.5, 'Comida'),
-(11, 'cacique', 3.5, 'bebida');
+(10, 'montadito de mechá', 2.5, 'Comida');
 
 -- --------------------------------------------------------
 
@@ -73,7 +72,7 @@ CREATE TABLE `usuarios` (
   `id` int(3) NOT NULL,
   `nombre` varchar(20) NOT NULL,
   `apellidos` varchar(20) NOT NULL,
-  `correo_electronico` varchar(20) NOT NULL,
+  `correo_electronico` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `contraseña` longtext NOT NULL,
   `direccion` varchar(25) NOT NULL,
   `id_tipo` int(3) NOT NULL
@@ -84,7 +83,9 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nombre`, `apellidos`, `correo_electronico`, `contraseña`, `direccion`, `id_tipo`) VALUES
-(1, 'asd', 'asd', 'asd', 'e10adc3949ba59abbe56e057f20f883e', 'asd', 1);
+(1, 'asd', 'asd', 'asd', 'e10adc3949ba59abbe56e057f20f883e', 'asd', 1),
+(2, 'Antonio Jesus', 'Rojas Roman', 'antonio@gmail.com', '25f9e794323b453885f5181f1b624d0b', 'Iglesia 11', 1),
+(3, 'Benito', 'Mendoza Nabo', 'benito_kamela@correo.com', '25f9e794323b453885f5181f1b624d0b', 'Calle Utrera', 1);
 
 --
 -- Índices para tablas volcadas
@@ -110,13 +111,13 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id_Producto` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_Producto` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
