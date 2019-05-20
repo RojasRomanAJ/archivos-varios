@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 18-05-2019 a las 12:11:50
+-- Tiempo de generación: 20-05-2019 a las 01:48:22
 -- Versión del servidor: 8.0.16
 -- Versión de PHP: 7.3.5
 
@@ -53,14 +53,14 @@ CREATE TABLE `productos` (
 INSERT INTO `productos` (`id_Producto`, `nombre`, `precio`, `tipo_Producto`) VALUES
 (1, 'montadito de jamon', 2.0, 'Comida'),
 (2, 'montadito de lomo', 1.0, 'Comida'),
-(3, 'batido de fresa', 8.0, 'Bebida'),
 (4, 'kas de naranja', 1.0, 'Bebida'),
 (5, 'kas de limon', 1.0, 'Bebida'),
 (6, 'coca cola zero', 1.0, 'Bebida'),
 (7, 'coca cola light', 1.0, 'Bebida'),
 (8, 'helado de chocolate', 1.0, 'Helado'),
 (9, 'helado de fresa', 1.0, 'Helado'),
-(10, 'montadito de mechá', 2.5, 'Comida');
+(10, 'montadito de mechá', 2.5, 'Comida'),
+(14, 'hamburguesa de buey', 4.5, 'Comida');
 
 -- --------------------------------------------------------
 
@@ -111,7 +111,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id_Producto` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_Producto` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
